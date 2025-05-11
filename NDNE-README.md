@@ -31,18 +31,11 @@ Finsish the aboive steps and F5
 - Create a Web App
     - Node 20 LTS
     - Set Environment variables under Settings -> Environment variables
-        - DATABASE=postgres
-        - POSTGRES__HOST=yourservername.postgres.database.azure.com
-        - POSTGRES__PORT=5432
-        - POSTGRES__DATABASE=nodebb
-        - POSTGRES__USERNAME=nodebb
-        - POSTGRES__PASSWORD=yourpassword
-        - URL=https://ndne.space
-        - SECRET=a_guid
-        - ADMIN__USERNAME=admin
-        - ADMIN__EMAIL=an_email
-        - ADMIN__PASSWORD=a_password
         - NODE_ENV=production
+    - Set Environment variables under under the  Settings -> Environments -> EnvironmentsSectrets in your github repo
+        NODEBB_ADMIN_PASSWORD
+        NODEBB_ADMIN_EMAIL
+        NODEBB_DB_PASSWORD
     - Set startup command under Settings -> Configuration
         - ./nodebb build && ./nodebb start
     - Setup CI/CD in Deployment -> Deployment center
