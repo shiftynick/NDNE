@@ -24,6 +24,19 @@ jobs:
           node-version: '20.x'
 
       - name: npm install, build, and test
+        env:
+          NODEBB_URL: 'https://ndne.space'
+          NODEBB_PORT: '4567'
+          NODEBB_ADMIN_USERNAME: 'admin'
+          NODEBB_ADMIN_PASSWORD:  ${{ secrets.NODEBB_ADMIN_PASSWORD }}
+          NODEBB_ADMIN_EMAIL:  ${{ secrets.NODEBB_ADMIN_EMAIL }}
+          NODEBB_DB: 'postgres'
+          NODEBB_DB_HOST: 'ndne.postgres.database.azure.com'
+          NODEBB_DB_PORT: '5432'
+          NODEBB_DB_USER: 'nodebb'
+          NODEBB_DB_PASSWORD:  ${{ secrets.NODEBB_DB_PASSWORD }}
+          NODEBB_DB_NAME: 'nodebb'
+          NODEBB_DB_SSL: 'true'
         run: |
           ./nodebb setup
           npm install
