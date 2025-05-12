@@ -1,6 +1,6 @@
 # Running after cloning the repo
 
-1. `.\nodebb.bat start`
+1. `.\nodebb.bat setup`
 2. delete the file: `.docker\database\postgresql\data\.gitkeep`
 3. `docker compose -f docker-compose-pgsql-only.yml up -d`
 4. open `http://localhost:4567/`
@@ -26,14 +26,14 @@ Finsish the aboive steps and F5
         - use the azure CLI
         - connect using the psql command (look for it under the PostgreSQL resource under connecting or connections)
             - CREATE DATABASE nodebb;
-            - CREATE ROLE nodebb WITH LOGIN PASSWORD 'yourpassword';
+            <!-- - CREATE ROLE nodebb WITH LOGIN PASSWORD 'yourpassword';
             - GRANT ALL PRIVILEGES ON DATABASE nodebb TO nodebb;
             - GRANT USAGE ON SCHEMA public TO nodebb;
             - GRANT CREATE ON SCHEMA public TO nodebb;
             - GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO nodebb;
             - GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO nodebb;
             - ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO nodebb;
-            - ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO nodebb;
+            - ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO nodebb; -->
 - Create a Web App
     - Node 20 LTS
     - Set Environment variables under Settings -> Environment variables
@@ -52,5 +52,3 @@ Finsish the aboive steps and F5
 - CI/CD firewalls
     - The Github runner has to be able to access the posgresql server. you can go to Settings -> Networking to add firewall rules.
     - You can either try to finmd the IP for the runner or temporarily add a rule for 0.0.0.0 - 255.255.255.255
-
-bl;ah

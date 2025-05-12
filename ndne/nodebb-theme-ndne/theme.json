@@ -1,0 +1,7 @@
+{
+    "id": "nodebb-theme-ndne",
+    "name": "NDNE Theme",
+    "description": "NDNE Theme",
+    "url": "https://github.com/shiftynick/NDNE/ndne/nodebb-theme-ndne",
+    "baseTheme": "nodebb-theme-harmony"
+}
