@@ -42,3 +42,8 @@ Finsish the aboive steps and F5
         - point to github or wherever branch
         - add a workflow
 
+
+- CI/CD firewalls
+    - The Github runner has to be able to access the posgresql server. you can go to Settings -> Networking to add firewall rules.
+    - You can either try to finmd the IP for the runner or temporarily add a rule for 0.0.0.0 - 255.255.255.255
+
