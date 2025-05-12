@@ -39,8 +39,7 @@ jobs:
           NODEBB_DB_NAME: 'nodebb'
           NODEBB_DB_SSL: 'true'
         run: |
-          ./nodebb setup
-          npm install
+          echo "nada"
 
       - name: Zip artifact for deployment
         run: zip release.zip ./* -r

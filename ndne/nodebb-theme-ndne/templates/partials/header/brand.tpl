@@ -1,5 +1,5 @@
 {{{ if (brand:logo || (config.showSiteTitle || widgets.brand-header.length)) }}}
-NDNE
+&nbsp;NDNE
 <div class="container-lg px-md-4 brand-container">
 	<div class="col-12 d-flex border-bottom pb-3 {{{ if config.theme.centerHeaderElements }}}justify-content-center{{{ end }}}">
 		{{{ if (brand:logo || config.showSiteTitle) }}}
