@@ -28,6 +28,12 @@ Finsish the aboive steps and F5
             - CREATE DATABASE nodebb;
             - CREATE ROLE nodebb WITH LOGIN PASSWORD 'yourpassword';
             - GRANT ALL PRIVILEGES ON DATABASE nodebb TO nodebb;
+            - GRANT USAGE ON SCHEMA public TO nodebb;
+            - GRANT CREATE ON SCHEMA public TO nodebb;
+            - GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO nodebb;
+            - GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO nodebb;
+            - ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO nodebb;
+            - ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO nodebb;
 - Create a Web App
     - Node 20 LTS
     - Set Environment variables under Settings -> Environment variables
